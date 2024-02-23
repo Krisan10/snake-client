@@ -12,13 +12,8 @@ const connect = function () {
 
   conn.on("connect", () => { // prints below when connection is made.
     console.log("Let the games begin!!!")
-    console.log("Name: Ike")
+    conn.write("Name: Ike\n");
   });
-
-
-  // conn.on("connext", () => {
-  //   console.log("Move: up")
-  // } )
 
   return conn;
 };
