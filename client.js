@@ -14,6 +14,10 @@ const connect = function () {
     console.log("Let the games begin!!!")
   });
 
+  conn.on("connect", () => {
+    console.log("Name: Ike")
+  });
+
   return conn;
 };
 
@@ -22,4 +26,6 @@ const connect = function () {
 console.log("Connecting ...");
 connect();
 
-module.exports = {client}
+module.exports = {
+  connect
+}
