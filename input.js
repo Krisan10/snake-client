@@ -21,19 +21,20 @@ const handleUserInput = function (data) {
   if (taunt.includes(data)) {
     switch (data) {
       case taunt[0]:
-        connection.write("Say: Foolish fool!\n");
+        connection.write("Say: And then...\n");
         break;
       case taunt[1]:
-        connection.write("Say: Did I win?\n");
+        connection.write("Say: there were none\n");
         break;
       case taunt[2]:
-        connection.write("Say: OBJECTION!!!\n");
+        connection.write("Say: Did I win?\n");
         break;
+
       case taunt[3]:
-        connection.write("Say: And then...\n");
+        connection.write("Say: Dame Da\n");
         break; 
       case taunt[4]:
-        connection.write("Say: there were none\n");
+        connection.write("Say: Zen Zen Dame Da\n");
         break;
     }
   }
