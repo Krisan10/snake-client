@@ -12,11 +12,9 @@ const connect = function () {
 
   conn.on("connect", () => { // prints below when connection is made.
     console.log("Let the games begin!!!")
-  });
-
-  conn.on("connect", () => { // prints below when connection is made.
     console.log("Name: Ike")
   });
+
 
   // conn.on("connext", () => {
   //   console.log("Move: up")
@@ -25,30 +23,6 @@ const connect = function () {
   return conn;
 };
 
-const stdin = process.stdin;
-
-const setupInput = function () {
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
-  return stdin;
-};
-
-const handleUserInput = function (data) {
-  if (key === '\u0003') {
-    console.log("game is over")
- 
-  }
-};
-
-
-stdin.on("data", handleUserInput)
-
-console.log("Connecting ...");
-connect();
-
 module.exports = {
   connect,
-  setupInput,
-  handleUserInput
 }
