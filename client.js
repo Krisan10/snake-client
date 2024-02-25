@@ -16,7 +16,9 @@ const connect = function() {
     console.log("Let the games begin!!!");
     conn.write(`Name: ${name}\n`);
   });
-
+  conn.on("data", (data) => {
+    console.log('server say: ', data)
+  })
   return conn;
 };
 
